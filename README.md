@@ -13,4 +13,8 @@ Dependencies:
 "method-override": "^3.0.0",
 "mongoose": "^6.2.1",
 
-
+Our aim is to make a website that will make the process easier of taking the
+appointments of Doctor’s , as any person have to travel two times to a doctor,
+for taking an appointment and then for checkup .
+So, through our website, they can take appointment of any doctor by just one
+click and basic detail form.
