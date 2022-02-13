@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>APPOINTMENT REQUESTS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .ftco-section {
+            padding: 7em 0;
+        }
+
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .col-md-6,
+        .col-md-12 {
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .justify-content-center {
+            justify-content: center !important;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        .heading-section {
+            font-size: 28px;
+            color: #000;
+            text-decoration: underline;
+            font-family: 'Acme', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid" style="width: 70%;">
+                <div class="d-flex flex-grow-1">
+                    <span class="w-100 d-lg-none d-block">
+                        <!-- hidden spacer to center brand on mobile -->
+                    </span>
+                    <a class="navbar-brand d-none d-lg-inline-block" href="#"><i class="far fa-square"></i> SQUARE </a>
+                    <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+                        <img src="https://via.placeholder.com/40?text=LOGO" alt="logo">
+                    </a>
+                    <div class="w-100 text-right">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#myNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+                    <ul class="navbar-nav ms-auto flex-nowrap">
+                        <li class="nav-item">
+                            <a href="../patients" id="patients" class="nav-link m-2 menu-item nav-active">PATIENTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../app_req" id="appointment request" class="nav-link m-2 menu-item">APPOINTMENT
+                                REQUEST</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="../prof_doc" id="profile" class="nav-link m-2 menu-item">PROFILE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../aboutUs" id="logout" class="nav-link m-2 menu-item">LOGOUT
+                                <!--<i
+                                    class="fas fa-user"></i>-->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">Appointment Requests</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-wrap">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <!--<th>&nbsp;</th>-->
+                                    <th>S No.</th>
+                                    <th>Name</th>
+                                    <th>Phone No.</th>
+
+                                    <th>Reason for Appointment</th>
+
+                                    <th>Approve for Appointment</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for (let i=0; i<arr.length; i++){%>
+                                    <tr class="alert" role="alert">
+                                        <td>
+                                            <%= i+1 %>
+                                        </td>
+                                        <td>
+                                            <%= arr[i].name %>
+                                        </td>
+                                        <td>
+                                            <%= arr[i].phone %>
+                                        </td>
+
+                                        <td>
+                                            <%= arr[i].rfa %>
+                                        </td>
+
+
+
+                                        <td>
+                                            <form action="" method="post"><input type="date"
+                                                name="date_doc"><button class="btn btn-outline-dark" type="submit" value="<%= arr[i].name %>"
+                                                name="patient_name">Approve</button></form>
+                                        </td>
+
+                                    
+
+                                    </tr>
+                                    <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

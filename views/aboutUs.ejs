@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Us</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <!--    Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900|Ubuntu:400,700&display=swap"
+        rel="stylesheet">
+    <!--    Bootstrap css files-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--    Custom css files-->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!--    Font Awesome-->
+    <script src="https://kit.fontawesome.com/0a79164bba.js" crossorigin="anonymous"></script>
+    <!--    Bootstrap js files-->
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <script type = "text/javascript" >
+            function preventBack() { window.history.forward(); }
+            setTimeout("preventBack()", 0);
+            window.onunload = function () { null };
+            </script>
+    <style>
+        .div-img {
+            background-image: url("https://wallpaperaccess.com/full/624157.jpg");
+            background-size: cover;
+            height: 46.5vw;
+            position: relative;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+        }
+
+        p {
+            margin-top: 0;
+            color: #8f8f8f;
+        }
+
+        .a-head-text {
+            width: 55vw;
+            left: 79px;
+            top: 10vw;
+            font-weight: bold;
+            font-size: 4vw;
+            line-height: 110%;
+        }
+
+        .a-text {
+            color: white;
+            position: absolute;
+        }
+
+        .white-section {
+            background-color: #fff;
+        }
+
+        #features {
+            position: relative;
+        }
+
+        #features .col-lg-4 {
+            padding: 5%;
+        }
+
+        i {
+            color: #1a205c;
+            margin-bottom: 1rem;
+        }
+
+        .iuser {
+            margin-bottom: 2rem;
+        }
+
+        i:hover {
+            color: #3327a0;
+        }
+
+        .container-fluid {
+            padding: 3% 15% 6%;
+        }
+
+        #login {
+            background-color: #5672bea1;
+        }
+
+        .section-heading {
+            padding-top: 3%;
+            font-size: 3rem;
+            line-height: 1.5;
+        }
+        .footer{
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    padding:1.5rem;
+    text-align: center;
+    color:black;
+    background-color: #5672bea1;;
+}
+.footer span{
+    color:#666;
+    font-family:serif;
+}
+    </style>
+</head>
+
+<body>
+    <div class="div-img">
+        <div class="a-text a-head-text">
+            Do you care about yourself? Help your health here at LyfCare !!
+            <!-- <h3>LYFCare</h3>
+            <p>You help your health</p> -->
+        </div>
+    </div>
+    <section class="white-section" id="features" style="text-align: center;">
+        <h2 class="section-heading">KEY FEATURES</h2>
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-lg-4">
+                    <i class="fas fa-check-circle fa-4x"></i>
+                    <h3 class="feature-title">Easy to use.</h3>
+                    <p>Take appointments with one click!</p>
+                </div>
+
+                <div class="col-lg-4">
+                    <i class="fas fa-solid fa-file-prescription fa-4x"></i>
+                    <h3 class="feature-title">Paperless Document Management</h3>
+                    <p>Keep your doctor's prescription, documents and appointment letters, all at one place.</p>
+                </div>
+
+                <div class="col-lg-4">
+                    <i class="fas fa-solid fa-stethoscope fa-4x"></i>
+                    <h3 class="feature-title">Certified Doctors</h3>
+                    <p>All the doctors here are certified by their id and you can check for their experience.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="login">
+        <section class="container-fluid" style="width: 80%; padding-top: 100px;">
+
+            <div class="row">
+
+                <div class="pricing column col-lg-6 col-md-6" style="padding-right: 50px ;">
+                    <div class="card">
+                        <div class="card-body">
+                            <i class="fas fa-solid fa-user fa-10x iuser"></i>
+
+                            <form action="../signUp_doctor" method="get">
+                                <button class="btn btn-lg btn-block btn-outline-dark" type="button"
+                                    onclick="window.location.href='../signUp_patient'">Sign Up as
+                                    Patient</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pricing column col-lg-6 col-md-6" style="padding-left: 50px ;">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <i class="fas fa-solid fa-user-nurse fa-10x iuser"></i>
+                            <button class="btn btn-lg btn-block btn-outline-dark" type="button"
+                                onclick="window.location.href='../signUp_doctor'">Sign Up as
+                                Doctor</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+
+    <section class="white-section container-fluid" id="features" style="text-align: center;">
+        <h2 class="section-heading">About Us</h2>
+        <p>
+            Our aim is to make the process easier of taking the appointments of Doctors, as any person have to travel
+            two times to a doctor, firstly for taking an appointment and then for check up.
+            As well as, it is hard and handy to keep all our Doctor's prescription at one place, using our website they
+            can upload all their Doctor's prescription at one place, so any time they need, they can access it.
+        </p>
+
+    </section>
+<!-- footer section  -->
+<footer class="footer"><b> &copy</b>Created by<span> TEAM SQUARE </span>
+ </footer>
+
+
+    
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Explore</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0a79164bba.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+                Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        .main-container {
+            padding: 30px;
+        }
+
+        /* HEADING */
+
+        .heading {
+            text-align: center;
+        }
+
+        .heading__title {
+            font-weight: 600;
+        }
+
+        .heading__credits {
+            margin: 10px 0px;
+            color: #888888;
+            font-size: 25px;
+            transition: all 0.5s;
+        }
+
+        .heading__link {
+            text-decoration: none;
+        }
+
+        .heading_credits .heading_link {
+            color: inherit;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card {
+            margin: 20px;
+            padding: 20px;
+            width: 500px;
+            min-height: 200px;
+            display: grid;
+            grid-template-rows: 20px 50px 1fr 50px;
+            border-radius: 10px;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+            transition: all 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+            transform: scale(1.05);
+        }
+
+        .card__link,
+        .card__exit,
+        .card__icon {
+            position: relative;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .card__link::after {
+            position: absolute;
+            top: 25px;
+            left: 0;
+            content: "";
+            width: 0%;
+            height: 3px;
+            background-color: rgba(255, 255, 255, 0.6);
+            transition: all 0.5s;
+        }
+
+        .card__link:hover::after {
+            width: 100%;
+        }
+
+        .card__exit {
+            grid-row: 1/2;
+            justify-self: end;
+        }
+
+        .card__icon {
+            grid-row: 2/3;
+            font-size: 30px;
+        }
+
+        .card__title {
+            grid-row: 3/4;
+            font-weight: 400;
+            color: #ffffff;
+        }
+
+        .card__apply {
+            grid-row: 4/5;
+            align-self: center;
+        }
+
+        /* CARD BACKGROUNDS */
+
+        .card-1 {
+            background: radial-gradient(#7fccd8, #496f94);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 1600px) {
+            .cards {
+                justify-content: center;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid" style="width: 70%;">
+                <div class="d-flex flex-grow-1">
+                    <span class="w-100 d-lg-none d-block">
+                        <!-- hidden spacer to center brand on mobile -->
+                    </span>
+                    <a class="navbar-brand d-none d-lg-inline-block" href="#"><i class="far fa-square"></i> SQUARE </a>
+                    <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+                        <img src="https://via.placeholder.com/40?text=LOGO" alt="logo">
+                    </a>
+                    <div class="w-100 text-right">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#myNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+                    <ul class="navbar-nav ms-auto flex-nowrap">
+                        <li class="nav-item">
+                            <a href="../explore" id="explore" class="nav-link m-2 menu-item nav-active">EXPLORE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../visits" id="visit" class="nav-link m-2 menu-item">VISITS</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="../prof_patient" id="profile" class="nav-link m-2 menu-item">PROFILE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../aboutUs" id="logout" class="nav-link m-2 menu-item">LOGOUT <i
+                                    class="fas fa-user"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="main-container">
+        <div class="cards">
+
+            <div class="card card-1">
+                <!-- <div class="card__icon"></div> -->
+                <h2 style="color: whitesmoke;">Orthopedic Surgeons</h2>
+                <p style="margin-top: 4%; font-size: larger; font-weight: 600;">An orthopaedic surgeon deals with issues relating to the musculoskeletal system.
+                </p>
+                <p class="card__apply">
+                    <a class="card__link" style="font-size: large; font-weight: 500;" href="../explore/Orthopedic Surgeons">Doctors List Here <i class="fas fa-arrow-right"></i></a>
+                </p>
+            </div>
+
+            <div class="card card-1">
+                <!-- <div class="card__icon"></div> -->
+                <h2 style="color: whitesmoke;">Cardiologist</h2>
+                <p style="margin-top: 4%; font-size: larger; font-weight: 600;">Cardiologists are doctors who specialize in the treatment of the cardiovascular system.
+                </p>
+                <p class="card__apply">
+                    <a class="card__link" style="font-size: large; font-weight: 500;" href="../explore/Cardiologist">Doctors List Here <i class="fas fa-arrow-right"></i></a>
+                </p>
+            </div>
+
+            <div class="card card-1">
+                <!-- <div class="card__icon"></div> -->
+                <h2 style="color: whitesmoke;">Neurologist</h2>
+                <p style="margin-top: 4%; font-size: larger; font-weight: 600;">A neurologist is responsible for treating and diagnosing issues of the nervous system.
+                </p>
+                <p class="card__apply">
+                    <a class="card__link" style="font-size: large; font-weight: 500;" href="../explore/Neurologist">Doctors List Here <i class="fas fa-arrow-right"></i></a>
+                </p>
+            </div>
+
+            <div class="card card-1">
+                <!-- <div class="card__icon"></div> -->
+                <h2 style="color: whitesmoke;">Psychiatrists</h2>
+                <p style="margin-top: 4%; font-size: larger; font-weight: 600;">A psychiatrist helps treat and diagnose issues of mental health.
+                </p>
+                <p class="card__apply">
+                    <a class="card__link" style="font-size: large; font-weight: 500;" href="../explore/Psychiatrists">Doctors List Here <i class="fas fa-arrow-right"></i></a>
+                </p>
+            </div>
+
+            <div class="card card-1">
+                <!-- <div class="card__icon"></div> -->
+                <h2 style="color: whitesmoke;">Dentist</h2>
+                <p style="margin-top: 4%; font-size: larger; font-weight: 600;">A dentist is known to diagnose and treat issues of teeth, tongue and gums.
+                </p>
+                <p class="card__apply">
+                    <a class="card__link" style="font-size: large; font-weight: 500;" href="../explore/Dentist">Doctors List Here <i class="fas fa-arrow-right"></i></a>
+                </p>
+            </div>
+
+            <div class="card card-1">
+                <!-- <div class="card__icon"></div> -->
+                <h2 style="color: whitesmoke;">Pulmonologist</h2>
+                <p style="margin-top: 4%; font-size: larger; font-weight: 600;">A pulmonologist is a doctor who diagnoses and treats diseases of the respiratory system. 
+                </p>
+                <p class="card__apply">
+                    <a class="card__link" style="font-size: large; font-weight: 500;" href="../explore/Pulmonologist">Doctors List Here <i class="fas fa-arrow-right"></i></a>
+                </p>
+            </div>
+            
+            <div class="card card-1">
+                <!-- <div class="card__icon"></div> -->
+                <h2 style="color: whitesmoke;">Gynaecologist</h2>
+                <p style="margin-top: 4%; font-size: larger; font-weight: 600;">A gynecologist is a doctor who specializes in female reproductive health. 
+                </p>
+                <p class="card__apply">
+                    <a class="card__link" style="font-size: large; font-weight: 500;" href="../explore/Gynaecologist">Doctors List Here <i class="fas fa-arrow-right"></i></a>
+                </p>
+            </div>
+
+            <div class="card card-1">
+                <!-- <div class="card__icon"></div> -->
+                <h2 style="color: whitesmoke;">ENT specialist</h2>
+                <p style="margin-top: 4%; font-size: larger; font-weight: 600;">ENT specialists treat pretty much everything from the collarbone up, except for the brain and eyes.
+                </p>
+                <p class="card__apply">
+                    <a class="card__link" style="font-size: large; font-weight: 500;" href="../explore/ENT specialist">Doctors List Here <i class="fas fa-arrow-right"></i></a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</body>

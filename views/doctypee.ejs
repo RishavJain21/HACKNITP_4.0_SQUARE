@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <title><%= doctor_type %> </title>
+    <style>
+        body {
+            font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            background-color: #efefef;
+            font-weight: 300;
+        }
+
+        p {
+            color: #b3b3b3;
+            font-weight: 300;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6 {
+            font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        a {
+            -webkit-transition: .3s all ease;
+            -o-transition: .3s all ease;
+            transition: .3s all ease;
+        }
+
+        a:hover {
+            text-decoration: underline !important;
+            color: black;
+        }
+
+        .content {
+            padding: 7rem 0;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        .custom-table {
+            min-width: 900px;
+        }
+
+        .custom-table thead tr,
+        .custom-table thead th {
+            border-top: none;
+            border-bottom: none !important;
+        }
+
+        .custom-table tbody th,
+        .custom-table tbody td {
+            color: #777;
+            font-weight: 400;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            font-weight: 300;
+            border: none;
+        }
+
+        .custom-table tbody th small,
+        .custom-table tbody td small {
+            color: #b3b3b3;
+            font-weight: 300;
+        }
+
+        .custom-table tbody tr {
+            -webkit-transition: .3s all ease;
+            -o-transition: .3s all ease;
+            transition: .3s all ease;
+        }
+
+        .custom-table tbody tr:hover,
+        .custom-table tbody tr:focus {
+            background: #fff;
+        }
+
+        .custom-table .td-box-wrap {
+            padding: 0;
+        }
+
+        .custom-table .box {
+            background: #fff;
+            border-radius: 4px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .custom-table .box td,
+        .custom-table .box th {
+            border: none !important;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid" style="width: 70%;">
+                <div class="d-flex flex-grow-1">
+                    <span class="w-100 d-lg-none d-block">
+                        <!-- hidden spacer to center brand on mobile -->
+                    </span>
+                    <a class="navbar-brand d-none d-lg-inline-block" href="#"><i class="far fa-square"></i> SQUARE </a>
+                    <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+                        <img src="https://via.placeholder.com/40?text=LOGO" alt="logo">
+                    </a>
+                    <div class="w-100 text-right">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#myNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+                    <ul class="navbar-nav ms-auto flex-nowrap">
+                        <li class="nav-item">
+                            <a href="../patients" id="patients" class="nav-link m-2 menu-item nav-active">PATIENTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../app_req" id="appointment request" class="nav-link m-2 menu-item">APPOINTMENT
+                                REQUEST</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="../prof_doc" id="profile" class="nav-link m-2 menu-item">PROFILE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../aboutUs" id="logout" class="nav-link m-2 menu-item">LOGOUT
+                                <!--<i
+                                    class="fas fa-user"></i>-->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>>
+    <div class="content">
+
+        <div class="container">
+            <h2 class="mb-5" style="text-decoration: underline; font-weight: 700; font-size:xx-large;"><%= doctor_type %> </h2>
+
+            <div class="table-responsive">
+
+                <table class="table custom-table">
+                    <thead>
+                        <tr>
+
+                            <th scope="col">S No.</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Clinic Address</th>
+                            <th scope="col">Contact</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for (let i=0; i<doctors.length; i++){%>
+                            
+                          
+                                <tr scope="row">
+
+                                    <td>
+                                        <%= i+1 %>
+                                    </td>
+                                    <td><a href="../aboutUs/<%=doctors[i].name%>" style="color: #777;"><h2>
+                                      Dr. <%= doctors[i].name %>
+                                    </h2></a></td>
+                                    <td>
+                                        <%= doctors[i].address %>
+                                    </td>
+                                    <td >
+                                        <%= doctors[i].phone %>
+                                    </td>
+                                    
+                                
+                                </tr>
+                            
+                        <% } %>
+                   
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
